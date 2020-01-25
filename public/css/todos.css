@@ -36,7 +36,7 @@ li:nth-child(2n) {
 	background-color: #f7f7f7;
 }
 
-li span {
+li button {
 	background-color: #e74c3c;
 	height: 40px;
 	margin-right: 20px;
@@ -46,11 +46,13 @@ li span {
 	display: inline-block;
 	transition: 0.2s linear;
 	opacity: 0;
+	border: none;
 }
 
-li:hover span {
+li:hover button {
 	width: 40px;
 	opacity: 1.0;
+	border: none;
 }
 
 input {
