@@ -15,7 +15,15 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect("mongodb://localhost:27017/todo");
+// mongoose.connect("mongodb://localhost:27017/todo");
+mongoose.connect("mongodb+srv://Lisa:****@cluster0-ulpnb.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useCreateIndex: true
+}).then(() => {
+	console.log("Connected to DB!");
+}).catch(err => {
+	console.log("Error: ", err.message);
+});
 
 app.get("/", function(req, res) {
 	Todo.find({}, function(err, todos) {
